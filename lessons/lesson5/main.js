@@ -121,3 +121,22 @@ const user2 = {
 
 user2.sayHello1('Artem');
 
+
+
+const createCompany = function (companyName) {
+    this.name = companyName;
+
+    return {
+        name: this.name,
+        boss: {
+            name: 'Sergei',
+            sayHello: () => {
+                console.log(`Hi students, my name is ${this.name}`)
+            }
+        }
+    }
+}
+
+const company = createCompany('OWU');
+console.log(company);
+// company.boss.sayHello()
