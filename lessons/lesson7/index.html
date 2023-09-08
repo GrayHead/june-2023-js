@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    // let now = new Date();
+    // console.log(now);
+    // console.log(now.getFullYear());
+    // console.log(now.getMonth()); // !!!!
+    // console.log(now.getDay());
+    // console.log(now.getHours());
+    // console.log(now.getMinutes());
+    // console.log(now.getSeconds());
+    // console.log(now.getMilliseconds());
+    // console.log(now.getTime()); // 01 01 1970
+
+    // let date1 = new Date(1693934021386);
+    // console.log(date1);
+
+    // let date = new Date("Dec 12 1987 09:15:15");
+    // let date = new Date(1987, 12 - 1, 12, 9, 15, 12);
+    // console.log(date);
+
+    // let user1 = {
+    //     id: new Date().getTime(),
+    //     name: 'vasya',
+    //     bday: new Date(12534754724789),
+    //
+    // }
+    //
+    // let user2 = {
+    //     id: new Date().getTime(),
+    //     name: 'vasya',
+    //     bday: new Date(12534754724789),
+    //
+    // }
+    // console.log(user1);
+    // console.log(user2);
+
+
+    // console.log('start');
+    // try {
+    //     console.log(notPresentedVariable);
+    // } catch (error) {
+    //     console.log(error);
+    // } finally {
+    //     console.log('end');
+    // }
+
+    // function foobar(num1, num2) {
+    //     if (typeof num1 === 'string' || typeof num2 === 'string') {
+    //         throw new Error('args cannot be not number');
+    //
+    //     }
+    //     return num1 + num2;
+    //
+    //
+    // }
+
+
+    // try {
+    //     foobar(10, sourceOfNumber);
+    // } catch (e) {
+    //
+    //
+    // }
+
+
+    // let obj = {
+    //     // innerObj:{ id:1}
+    // };
+
+
+    // if (obj.innerObj) {
+    // console.log(obj.innerObj.id);
+    //
+    // }
+    // console.log(obj.innerObj);
+
+    // console.log(obj?.innerObj?.id);
+    // console.log(obj.innerObj);
+
+
+    // ES6
+
+    // let namex = 'vasya';
+    //
+    // let user = {
+    //     id: 1,
+    //     // namex: namex
+    //     namex,
+    //     foo() {
+    //
+    //     },
+    // }
+    // console.log(user);
+    // user.foo();
+    // function usergenerator(id, name, age) {
+    //     return {id, name, age}
+    //
+    // }
+
+    let car = {
+        id: 1,
+        producer: 'subaru',
+        model: 'wrx',
+        power: 365
+    };
+
+    // let id = car.id;
+    // let model = car.model;
+
+    // let {id, model} = car;
+    // console.log(id);
+    // console.log(model);
+    //
+    // // function extractor({id, model}) {
+    // //
+    // //     return {
+    // //         carId: id,
+    // //         carModel: model
+    // //     }
+    // //
+    // // }
+    // //
+    // // extractor({id: 'asdasd', model: 'asdas', asd: '', qwe: ''})
+    //
+    //
+    // let car2 = {
+    //     id: 2,
+    //     producer: 'vopsche',
+    //     model: 'cayenne',
+    //     power: 450,
+    //     fary: true,
+    //     kasko: true
+    // };
+    //
+    // let {id:vId, model:vModel} = car2;
+    // console.log(vId);
+
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // let [user1, user2, , user4] = users;
+    // console.log(user1);
+    // console.log(user2);
+    // console.log(user4);
+
+    //
+    // let user = {
+    //     name: 'kokos',
+    //     age: 123,
+    //
+    //
+    // }
+    //
+    // // let user2 = {name : user.name, age : user.age};
+    // // user2.name = 'qqq'
+    // // user2.id = 2
+    // let user2 = {...user, id: 2, name: 'qqq'};
+    //
+    // console.log(user);
+    // console.log(user2);
+    // console.log()
+
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // let usersCopy = [...users,1,2,3,4];
+    // console.log(usersCopy);
+
+
+    let user = {
+        name: 'kokos',
+        age: 123,
+        wife: {
+            name: 'anna',
+
+        },
+        foo() {
+
+        },
+    }
+
+    // let user2 = {...user};
+    //
+    // console.log(user == user2);
+    // console.log(user.wife == user2.wife);
+
+    // let jsonUser = JSON.stringify(user);
+    // console.log(jsonUser);
+    // let parseUser = JSON.parse(jsonUser);
+    // console.log(parseUser);
+    //
+    // console.log(user === parseUser);
+    // console.log(user.wife === parseUser.wife);
+
+    // let assign = Object.assign({}, user);
+    // console.log(assign);
+    // console.log(assign === user);
+    // console.log(assign.wife === user.wife);
+
+    // let clone = structuredClone(user);
+    // console.log(clone);
+
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    let map = users.map((value, index) => {
+        return {...value, id: index + 1};
+    });
+
+    console.log(map);
+    console.log(users);
+    console.log(map === users);
+    console.log(map[0] === users[0]);
+
+</script>
+</body>
+</html>
