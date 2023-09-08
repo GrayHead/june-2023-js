@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 8</title>
+</head>
+<body>
+<script>
+
+    // function userFactoryFunction(id, name) {
+    //     return {id, name}
+    // }
+    // let user = userFactoryFunction(1, 'vasya');
+    //
+    // console.log(user);
+
+    // function User(id, name) {
+    //     this.id = id;
+    //     this.name = name;
+    //     this.greeting = function () {
+    //         console.log(`hello my name is ${this.name}`);
+    //     };
+    // }
+    //
+    // let user = new User(1, 'vasya');
+    //
+    // // let yser = {
+    // //     id: 1,
+    // //     name: 'vasysa',
+    // //     greeting: function () {
+    // //
+    // //         console.log(`hello my name is ${this.name}`);
+    // //     }
+    // // }
+    //
+    // console.log(user);
+    // user.greeting();
+    //
+    // let user2 = new User(2, 'petya');
+    // console.log(user2);
+    // user2.greeting();
+    //
+    // console.log(new User());
+    //
+    //
+    // function Customer(id, name, skills, wife) {
+    //     let {name: nameOfWife} = wife;
+    //     this.id = id;
+    //     this.name = name;
+    //     this.skills = skills;
+    //     this.wifeName = nameOfWife;
+    // }
+    //
+    // let customer = new Customer(111, '', ['asdsad', 'asdasdasd'], {name: 'anna'});
+    //
+    //
+    // let users = [
+    //     {id: 1, name: 'asdasd'},
+    //     new User(1, 'asdsad'),
+    //     new User(1, 'asdsad'),
+    //     new User(1, 'asdsad'),
+    //     new User(1, 'asdsad'),
+    //     new User(1, 'asdsad'),
+    //     new User(1, 'asdsad')
+    // ];
+
+
+    // function User(id, name, age) {
+    //     this.id = id;
+    //     this.name = name;
+    //     this.age = age;
+    //     this.greeting = function (msg, a, c, v) {
+    //         return `${msg} my name is ${this.name} and my age is ${this.age}`
+    //     };
+    //
+    // }
+    //
+    // let user1 = new User(111, 'kokos', 123);
+    //
+    //
+    // console.log(user1.greeting('hello'));
+    //
+    // let user2 = { // introver
+    //     name: 'abrikos',
+    //     age: 234,
+    // }
+    //
+    // // console.log(user1.greeting.call(user2, 'hi', 'asd', 'qwe', 'qwe'));
+    // // console.log(user1.greeting.apply(user2, ['hi', 'asd', 'qwe', 'qwe']));
+    //
+    // let greeting = user1.greeting.bind(user2);
+    // console.log(greeting);
+    // console.log(greeting('asd', 'qsdqewq', 'erewte', 'teirt'));
+
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // console.log(typeof users);
+    // console.log(Array.isArray(users));
+    //
+    //
+    // Array.prototype.print = function () {
+    //     for (const item of this) {
+    //         console.log(item);
+    //     }
+    // };
+    //
+    // users.print();
+    //
+    // let numbers = [11, 22, 33, 44, 55, 66];
+    //
+    // numbers.print();
+    //
+    //
+    // let array = [11, 22, 33, 44, 55];
+    //
+    // console.log(array);
+    //
+    // console.log(Array.prototype);
+
+    // function Car(model, power) {
+    //     this.model = model;
+    //     this.power = power;
+    //
+    // }
+    //
+    //
+    // Car.prototype.info = function () {
+    //     console.log(`model - ${this.model}, power - ${this.power}`);
+    // };
+    //
+    //
+    // let car = new Car('legacy', 164);
+    //
+    // car.info();
+
+
+    // let User = class {
+    //     constructor(id, name) {
+    //         this.id = id;
+    //         this.name = name;
+    //     }
+    //
+    //     greeting() {
+    //         console.log(`hello my name is ${this.name}`)
+    //     }
+    // }
+    //
+    // let user = new User(1111, 'kokos');
+    // console.log(user);
+    // user.greeting();
+    //
+    //
+    // class Customer extends User {
+    //     constructor(id, name, products) {
+    //         super(id, name);
+    //         this.products = products;
+    //     }
+    // }
+    //
+    // let customer = new Customer(123, 'asd', []);
+
+
+    function User(id, name) {
+
+        this.id = id;
+        this.name = name;
+    }
+
+    function Customer(id, name, products) {
+        User.call(this, id, name);
+        this.products = products;
+    }
+
+</script>
+</body>
+</html>
