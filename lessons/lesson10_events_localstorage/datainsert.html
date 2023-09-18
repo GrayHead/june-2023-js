@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" name="f1">
+    <input type="text" name="title">
+    <input type="number" name="price">
+    <button>save</button>
+</form>
+<script>
+
+
+    let lsState = JSON.parse(localStorage.getItem('products')); // null || [....]
+    if (!lsState) {
+        localStorage.setItem('products', JSON.stringify([]));
+        lsState = [];
+    }
+
+    let f1 = document.forms.f1;
+    f1.onsubmit = function (e) {
+        e.preventDefault();
+        let product = {
+            title: this.title.value,
+            price: this.price.value
+        }
+
+        console.log(product);
+
+        let jsonProducts = localStorage.getItem('products'); // '[]'
+        lsState.push(product); // [.]
+        let againJsonProductsArray = JSON.stringify(lsState); // '[.]'
+        localStorage.setItem('products', againJsonProductsArray); // +ls
+
+
+    };
+
+
+    // let arrayWithDat = JSON.parse(localStorage.getItem('array')) || [];
+    // console.log(arrayWithDat);
+
+    {
+        let n = this || self, p = function (a, b) {
+            a = a.split(".");
+            let c = n;
+            a[0] in c || "undefined" == typeof c.execScript || c.execScript("var " + a[0]);
+            for (var d; a.length && (d = a.shift());)
+                a.length || void 0 === b ? c = c[d] && c[d] !== Object.prototype[d] ? c[d] : c[d] = {} : c[d] = b
+        };
+
+    }
+
+</script>
+</body>
+</html>

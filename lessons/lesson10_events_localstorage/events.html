@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .target {
+            width: 200px;
+            height: 200px;
+            background: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="target"></div>
+
+<form action="" name="f1">
+    <input type="text" name="login" placeholder="login">
+    <input type="password" name="password" placeholder="password">
+    <button>send</button>
+</form>
+<script>
+    // console.log(window);
+    // window.onload = function () {
+    //     console.log('load');
+    // };
+    //
+    // window.onmousemove = function (e) {
+    //     console.log(e.clientX, e.clientY);
+    // };
+
+    // let target = document.getElementsByClassName('target')[0];
+    // console.log(target);
+    //
+    // let flag = false;
+    //
+    // target.onclick = function () {
+    //     if (!flag) {
+    //         this.style.width = '300px';
+    //         flag = !flag;
+    //     } else {
+    //         this.style.width = '200px';
+    //         flag = !flag;
+    //     }
+    // };
+    //
+    // target.onmouseover = function (e) {
+    //     console.log(e.clientX, e.clientY);
+    //
+    // };
+
+    let f1 = document.forms.f1;
+
+
+    // f1.addEventListener('submit', function (e) {
+    //     e.preventDefault();
+    //     console.log('sb1');
+    // });
+
+    f1.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let login = this.login.value;
+        console.log(login);
+        let password = this.password.value;
+        console.log(password);
+        let obj = {login: login, password: password};
+        localStorage.setItem('userData', JSON.stringify(obj));
+
+    });
+
+    f1.password.onfocus = function () {
+        this.type = 'text';
+    };
+    f1.password.onblur = function () {
+        this.type = 'password';
+    };
+
+    let json = localStorage.getItem('userData');
+    console.log(json);
+    let userdata = JSON.parse(json);
+    console.log(userdata);
+
+
+</script>
+</body>
+</html>

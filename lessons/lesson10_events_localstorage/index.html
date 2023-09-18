@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" id="f1">
+    <input type="text" name="login" placeholder="login" value="def name">
+    <input type="password" name="password" placeholder="password">
+    <button>log in</button>
+</form>
+
+<script>
+    console.log(document.forms[0]);
+    let f1Ref = document.forms['f1'];
+    console.log(f1Ref);
+
+    console.log(f1Ref.login);
+    console.log(f1Ref.password);
+
+    let login = f1Ref.login;
+    console.log(login);
+    console.log(login.value);
+
+</script>
+</body>
+</html>
