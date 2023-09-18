@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Count: <b id="count"></b></h1>
+
+<script>
+    const count = localStorage.getItem('count') || 0;
+    const block = document.getElementById('count');
+    const newCount = (+count + 1).toString();
+
+    block.innerText = newCount;
+    localStorage.setItem('count', newCount);
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            border: 2px blue solid;
+        }
+
+        .wrapper {
+            width: 300px;
+            padding: 10px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item {
+            margin-top: 10px;
+            border: 2px red solid;
+        }
+
+    </style>
+</head>
+<body>
+<form name="creator" class="form wrapper">
+    <label class="flex">Name:<input type="text" name="name"></label>
+    <br/>
+    <label class="flex">Surname:<input type="text" name="surname"></label>
+    <br/>
+    <label class="flex">Age:<input type="number" name="age"></label>
+    <br/>
+    <button>Create user</button>
+</form>
+
+<script>
+    const form = document.forms.creator;
+    form.onsubmit = function (e) {
+        e.preventDefault();
+
+        const wrapper = document.createElement('div');
+        const name = document.createElement('div');
+        const surname = document.createElement('div');
+        const age = document.createElement('div');
+
+        name.innerText = this.name.value;
+        surname.innerText = this.surname.value;
+        age.innerText = this.age.value;
+
+        this.name.value = '';
+        this.surname.value = '';
+        this.age.value = '';
+
+        wrapper.append(name, surname, age);
+        document.body.appendChild(wrapper);
+    }
+
+</script>
+</body>
+</html>

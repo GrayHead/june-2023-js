@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            border: 2px blue solid;
+        }
+        .wrapper {
+            width: 300px;
+            padding: 10px;
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+        table, td {
+            margin-top: 10px;
+            border: black solid 2px;
+        }
+    </style>
+</head>
+<body>
+<form name="creator" class="form wrapper">
+    <label class="flex">Rows:<input type="number" min="0" name="row"></label>
+    <br/>
+    <label class="flex">Columns:<input type="number" min="0" name="column"></label>
+    <br/>
+    <label class="flex">Content:<input type="text" name="content"></label>
+    <br/>
+    <button>Create table</button>
+</form>
+
+<div id="result"></div>
+<script>
+    const form = document.forms.creator;
+    const wrapper = document.getElementById('result');
+
+    form.onsubmit = function (e) {
+        e.preventDefault();
+
+        const table = document.createElement('table');
+
+        const rowCount = +this.row.value;
+        const columnCount = +this.column.value;
+
+        for (let i = 0; i < rowCount; i++) {
+            const tr = document.createElement('tr');
+
+            for (let i = 0; i < columnCount; i++) {
+                const td = document.createElement('td');
+                td.innerText = this.content.value;
+                tr.appendChild(td);
+            }
+
+            table.appendChild(tr);
+        }
+
+        wrapper.appendChild(table)
+    }
+</script>
+</body>
+</html>

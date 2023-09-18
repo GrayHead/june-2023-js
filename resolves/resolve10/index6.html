@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="checker">
+    <input type="number"
+           name="age">
+    <button>check age</button>
+</form>
+<script>
+    const form = document.forms.checker;
+    form.onsubmit = function (e) {
+        e.preventDefault();
+        if (+this.age.value < 18) {
+            return alert('go away');
+        }
+        alert('welcome');
+    }
+</script>
+</body>
+</html>

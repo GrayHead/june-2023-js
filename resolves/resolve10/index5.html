@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const h1 = document.createElement('h1');
+    const btn = document.createElement('button');
+
+    h1.innerText = 'some text';
+    btn.innerText = 'click';
+
+    document.body.append(h1, btn);
+    let flag = true;
+    btn.addEventListener('click', (e) => {
+        if (flag) {
+            h1.style.display = 'none';
+        } else {
+            h1.style.display = 'block';
+        }
+        flag = !flag;
+    })
+</script>
+</body>
+</html>
