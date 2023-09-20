@@ -62,3 +62,27 @@ handler()
 //
 // const {name: firstName} = user;
 // console.log(firstName)
+
+
+
+// TODO see clock example
+async function startClock(startH, startM, startS) {
+    for (let hour = startH; hour < 24; hour++) {
+        for (let min = startM; min < 60; min++) {
+            for (let sec = startS; sec < 60; ++sec) {
+                console.log(`Time: ${hour} : ${min} : ${sec}`);
+                await waitOneSecond();
+            }
+        }
+    }
+}
+
+startClock(15, 30, 0);
+
+function waitOneSecond() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, 1000);
+    });
+}
