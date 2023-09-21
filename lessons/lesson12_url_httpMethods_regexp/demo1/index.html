@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    console.log(location);
+    console.log(location.href);
+
+    let url = new URL(location.href);
+    console.log(url);
+    console.log(url.searchParams);
+    console.log(url.searchParams);
+    let params = [];
+    url.searchParams.forEach((value, key, parent) => {
+        params.push({key, value})
+    });
+
+    console.log(params);
+
+    console.log(url.searchParams.get('_ijt'));
+
+</script>
+</body>
+</html>
