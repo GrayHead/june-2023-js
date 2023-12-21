@@ -49,18 +49,19 @@
         const surname = document.createElement('div');
         const age = document.createElement('div');
 
-        name.innerText = this.name.value;
-        surname.innerText = this.surname.value;
-        age.innerText = this.age.value;
+        name.innerText = `Name: ${this.name.value}`;
+        surname.innerText = `Surname: ${this.surname.value}`;
+        age.innerText = `Age: ${this.age.value}`;
 
         this.name.value = '';
         this.surname.value = '';
         this.age.value = '';
 
+        wrapper.classList.add('item', 'wrapper');
+
         wrapper.append(name, surname, age);
         document.body.appendChild(wrapper);
     }
-
 </script>
 </body>
 </html>
